@@ -5,12 +5,10 @@ namespace Tasks.Controllers
 {
 	public class ContactController : Controller
 	{
-		public String Index()
+		public IActionResult Index()
 		{
-			return "First Contact on the List is Chioma";
+			return View();
 		}
-
-		
 	}
 }
 
