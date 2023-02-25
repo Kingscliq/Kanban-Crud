@@ -1,10 +1,16 @@
-﻿@{
+﻿@model Tasks.Models.TodosModel
+
+
+
+@{
     ViewData["Title"] = "Contact Page";
 }
 
 <div class="text-center">
     <h1 class="display-4">This is my Contact Page</h1>
     <p>Click to search<a href="https://docs.microsoft.com/aspnet/core">Google</a></p>
+
+    <h3>hey My Dogs name is  @Model.title and He is <span class="text-danger">@Model.description</span> years old</h3>
 </div>
 
 
