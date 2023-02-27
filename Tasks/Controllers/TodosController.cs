@@ -6,17 +6,26 @@ namespace Tasks.Controllers
 {
 	public class TodosController : Controller
 	{
-		TodosModel task = new TodosModel("Bingo", "This is a Dog");
+
+		private static List<TodosModel> task = new List<TodosModel>();
 
 		public IActionResult Index()
 		{
-			return View(task);
+            return View(task);
 		}
+
 
         public IActionResult Create()
         {
+			var todo = new TodosModel();
             return View();
         }
+
+		public IActionResult CreateTodo(TodosModel todoModel)
+		{
+			task.Add(todoModel);
+			return RedirectToAction(nameof(Index));
+		}
     }
 }
 
