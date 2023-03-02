@@ -1,4 +1,10 @@
 ﻿<Properties StartupConfiguration="{47D48D76-B049-46AD-AF5B-8D99B0D2171B}|Default">
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MonoDevelop.Ide.ItemProperties.Tasks PreferredExecutionTarget="/Applications/Brave Browser.app" />
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore />
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
   <MonoDevelop.Ide.Workbench ActiveDocument="Tasks/Controllers/TodosController.cs">
     <Files>
       <File FileName="Tasks/Properties/launchSettings.json" />
@@ -9,20 +15,18 @@
       <File FileName="Tasks/Views/Home/Index.cshtml" />
       <File FileName="Tasks/Tasks.csproj" />
       <File FileName="Tasks/Controllers/HomeController.cs" />
-      <File FileName="Tasks/Views/Todos/Create.cshtml" Line="1" Column="12" />
+      <File FileName="Tasks/Views/Todos/Create.cshtml" />
       <File FileName="Tasks/Models/ErrorViewModel.cs" />
-      <File FileName="Tasks/Models/TodosModel.cs" Line="1" Column="1" />
-      <File FileName="Tasks/Controllers/TodosController.cs" Line="18" Column="38" />
-      <File FileName="Tasks/Views/Todos/Index.cshtml" Line="8" Column="29" />
+      <File FileName="Tasks/Models/TodosModel.cs" />
+      <File FileName="Tasks/Controllers/TodosController.cs" Line="20" Column="27" />
+      <File FileName="Tasks/Views/Todos/Index.cshtml" />
     </Files>
     <Pads>
       <Pad Id="ProjectPad">
         <State name="__root__">
           <Node name="Tasks" expanded="True">
             <Node name="Tasks" expanded="True">
-              <Node name="Controllers" expanded="True">
-                <Node name="TodosController.cs" selected="True" />
-              </Node>
+              <Node name="Controllers" expanded="True" />
               <Node name="Models" expanded="True" />
               <Node name="Properties" expanded="True" />
               <Node name="Views" expanded="True">
@@ -32,16 +36,7 @@
           </Node>
         </State>
       </Pad>
-      <Pad Id="MonoDevelop.Debugger.WatchPad">
-        <State />
-      </Pad>
     </Pads>
   </MonoDevelop.Ide.Workbench>
-  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
-  <MonoDevelop.Ide.DebuggingService.Breakpoints>
-    <BreakpointStore />
-  </MonoDevelop.Ide.DebuggingService.Breakpoints>
-  <MonoDevelop.Ide.ItemProperties.Tasks PreferredExecutionTarget="/Applications/Brave Browser.app" />
   <MultiItemStartupConfigurations />
-  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
 </Properties>

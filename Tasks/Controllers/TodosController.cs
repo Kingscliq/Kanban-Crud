@@ -14,7 +14,6 @@ namespace Tasks.Controllers
             return View(task);
 		}
 
-
         public IActionResult Create()
         {
 			var todo = new TodosModel();
