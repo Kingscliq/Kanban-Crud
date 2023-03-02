@@ -31,16 +31,20 @@ namespace Tasks.Controllers
 
 		[HttpPost]
 		[ValidateAntiForgeryToken]
+
 		public IActionResult CreateTodo(TodosModel todo)
 		{
 			if (ModelState.IsValid)
 			{
 				_db.Todos.Add(todo);
 				_db.SaveChanges();
-                return RedirectToAction(nameof(Index));
-            }
 
-			return View(todo);
+                return RedirectToAction(nameof(Index));
+			}
+				return View("Create");
+	
+
+			
 		}
     }
 }
