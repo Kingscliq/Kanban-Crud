@@ -5,23 +5,31 @@
 }
 
 <div>
-    <h1 class="fs-4 fw-bold">Todo lists for Today</h1>
+    <h1 class="fs-2 fw-bold">Todo lists for Today</h1>
+    <hr/>
 
     <ul class="list-group">
         @foreach (var task in Model)
         {
             <li class="list-group-item">
-                <div class="d-flex align-items-center">
+                <div class="d-flex align-items-center justify-content-between">
+                    <div class="d-flex align-items-center">
                     <div>
                         <input class="checkbox" style="height: 30px; width: 30px" type="checkbox" checked=@task.isCompleted>
                     </div>
-                    <div class="col-6">
-                    <label class="form-check-label fs-4"> @task.title</label>
+                    <div class="mx-3">
+                    <label class="form-check-label fs-6"> @task.title</label>
                     <div>
                         <small class="text-secondary">@task.description</small>
                     </div>
                     </div>
-                </div>    
+                </div>
+                    <div class="btn-group">
+                        <a asp-controller="Todos" asp-action="Edit" asp-route-id=@task.Id class="text-secondary btn"><i class="bi bi-pencil-square"></i>Edit</a>
+                        <a asp-controller="Todos" asp-action="Edit" asp-route-id=@task.Id class="ml-2 text-danger btn"><i class="bi bi-trash3"></i>Delete</a>
+                    </div>
+                </div>
+                  
             </li>
         }
     </ul>

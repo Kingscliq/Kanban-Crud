@@ -2,10 +2,10 @@
 
 
 @{
-    ViewData["Title"] = "Create Todos";
+    ViewData["Title"] = "Edit Todo";
 }
 
-<form class="row" asp-controller="Todos" asp-action="CreateTodo" method="post">
+<form class="row" asp-action="Edit" method="post">
     <div class="col-6">
 <div class="card">
     <div class="card-header">
@@ -22,7 +22,7 @@
             <input asp-for=description type="text" class="form-control" id="exampleInputPassword1" placeholder="Enter Task Description">
             <span id="emailHelp" class="form-text text-danger" asp-validation-for="description"></span>
         </div>
-        <button type="submit" class="btn btn-primary">Submit</button>
+        <button type="submit" class="btn btn-primary">Update</button>
         </div>
     </div>
     </div>
