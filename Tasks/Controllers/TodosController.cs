@@ -33,8 +33,11 @@ namespace Tasks.Controllers
 		[ValidateAntiForgeryToken]
 		public IActionResult CreateTodo(TodosModel todo)
 		{
-			_db.Todos.Add(todo);
-			_db.SaveChanges();
+			if (ModelState.IsValid)
+			{
+				_db.Todos.Add(todo);
+				_db.SaveChanges();
+			}
 			return RedirectToAction(nameof(Index));
 		}
     }
