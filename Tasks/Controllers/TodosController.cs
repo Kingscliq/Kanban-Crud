@@ -40,9 +40,9 @@ namespace Tasks.Controllers
 
                 return RedirectToAction(nameof(Index));
 			}
+
 			return RedirectToAction(nameof(Create));
         }
-
 
         [HttpPatch]
         [ValidateAntiForgeryToken]
