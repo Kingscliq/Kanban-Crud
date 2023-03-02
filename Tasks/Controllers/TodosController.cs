@@ -23,10 +23,9 @@ namespace Tasks.Controllers
 			return View(todos);
 		}
 
-        public IActionResult Create(TodosModel todo)
+        public IActionResult Create()
         {
-
-            return View(todo);
+            return View();
         }
 
 		[HttpPost]
@@ -41,9 +40,26 @@ namespace Tasks.Controllers
 
                 return RedirectToAction(nameof(Index));
 			}
-			return View(nameof(Create));
-			
-		}
+			return RedirectToAction(nameof(Create));
+        }
+
+
+        [HttpPatch]
+        [ValidateAntiForgeryToken]
+        public IActionResult Edit(int? id)
+        {
+			if(id == null || id == 0)
+				return NotFound();
+
+			var todoItem = _db.Todos.Find(id);
+
+			if (todoItem == null)
+				return NotFound();
+
+			return View(todoItem);
+        }
+
+       
     }
 }
 

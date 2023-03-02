@@ -36,6 +36,10 @@ build_metadata.AdditionalFiles.CssScope =
 build_metadata.AdditionalFiles.TargetPath = Vmlld3MvVG9kb3MvQ3JlYXRlLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
+[/Users/crowdforce/Projects/Tasks/Tasks/Views/Todos/Edit.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvVG9kb3MvRWRpdC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
 [/Users/crowdforce/Projects/Tasks/Tasks/Views/Todos/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3MvVG9kb3MvSW5kZXguY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
