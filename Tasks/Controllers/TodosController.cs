@@ -1,5 +1,6 @@
 ﻿using System;
 using Microsoft.AspNetCore.Mvc;
+using Tasks.Data;
 using Tasks.Models;
 
 namespace Tasks.Controllers
@@ -8,10 +9,18 @@ namespace Tasks.Controllers
 	{
 
 		private static List<TodosModel> task = new List<TodosModel>();
+		private readonly TodosDbContext _db;
+
+		public TodosController(TodosDbContext db)
+		{
+			this._db = db;
+		}
 
 		public IActionResult Index()
 		{
-            return View(task);
+			var todos = _db.Todos.ToList();
+
+			return View(todos);
 		}
 
         public IActionResult Create()
@@ -20,9 +29,12 @@ namespace Tasks.Controllers
             return View();
         }
 
-		public IActionResult CreateTodo(TodosModel todoModel)
+		[HttpPost]
+		[ValidateAntiForgeryToken]
+		public IActionResult CreateTodo(TodosModel todo)
 		{
-			task.Add(todoModel);
+			_db.Todos.Add(todo);
+			_db.SaveChanges();
 			return RedirectToAction(nameof(Index));
 		}
     }

@@ -5,12 +5,24 @@
 }
 
 <div>
-    <h1 class="display-4">This is my Contact Page</h1>
-    <p>Click to search<a href="https://docs.microsoft.com/aspnet/core">Google</a></p>
+    <h1 class="fs-4 fw-bold">Todo lists for Today</h1>
 
     <ul class="list-group">
-        @foreach(var task in Model){
-          <li class="list-group-item">Name: @task.title ; Desc: <span class="text-danger">@task.description</span></li>
+        @foreach (var task in Model)
+        {
+            <li class="list-group-item">
+                <div class="d-flex align-items-center">
+                    <div>
+                        <input class="checkbox" style="height: 30px; width: 30px" type="checkbox" checked=@task.isCompleted>
+                    </div>
+                    <div class="col-6">
+                    <label class="form-check-label fs-4"> @task.title</label>
+                    <div>
+                        <small class="text-secondary">@task.description</small>
+                    </div>
+                    </div>
+                </div>    
+            </li>
         }
     </ul>
 </div>
