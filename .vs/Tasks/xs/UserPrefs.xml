@@ -1,44 +1,20 @@
 ﻿<Properties StartupConfiguration="{47D48D76-B049-46AD-AF5B-8D99B0D2171B}|Default">
-  <MultiItemStartupConfigurations />
-  <MonoDevelop.Ide.ItemProperties.Tasks PreferredExecutionTarget="/Applications/Brave Browser.app" />
-  <MonoDevelop.Ide.DebuggingService.Breakpoints>
-    <BreakpointStore />
-  </MonoDevelop.Ide.DebuggingService.Breakpoints>
-  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Tasks/Models/TodosModel.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Tasks/Views/Todos/Create.cshtml">
     <Files>
-      <File FileName="Tasks/Properties/launchSettings.json" />
-      <File FileName="Tasks/Views/_ViewImports.cshtml" />
-      <File FileName="Tasks/Views/Shared/_Layout.cshtml" />
-      <File FileName="Tasks/Views/Home/Privacy.cshtml" />
-      <File FileName="Tasks/Views/Home/Index.cshtml" />
-      <File FileName="Tasks/Views/Todos/Index.cshtml" />
-      <File FileName="Tasks/Tasks.csproj" />
-      <File FileName="Tasks/Models/Category.cs" />
-      <File FileName="Tasks/appsettings.json" />
-      <File FileName="Tasks/appsettings.Development.json" />
-      <File FileName="Tasks/Data/ApplicationDbContext.cs" />
-      <File FileName="Tasks/Controllers/TodosController.cs" Line="31" Column="1" />
-      <File FileName="Tasks/Models/TodosModel.cs" Line="21" Column="1" />
-      <File FileName="Tasks/Data/TodosDbContext.cs" Line="7" Column="15" />
-      <File FileName="Tasks/Program.cs" />
-      <File FileName="Tasks/Views/Todos/Create.cshtml" Line="10" Column="30" />
+      <File FileName="Tasks/Views/Home/Privacy.cshtml" Line="8" Column="1" />
+      <File FileName="Tasks/Views/Todos/Create.cshtml" Line="19" Column="30" />
     </Files>
     <Pads>
       <Pad Id="ProjectPad">
         <State name="__root__">
           <Node name="Tasks" expanded="True">
             <Node name="Tasks" expanded="True">
-              <Node name="Controllers" expanded="True" />
-              <Node name="Data" expanded="True" />
-              <Node name="Models" expanded="True">
-                <Node name="TodosModel.cs" selected="True" />
-              </Node>
-              <Node name="Properties" expanded="True" />
               <Node name="Views" expanded="True">
-                <Node name="Todos" expanded="True" />
+                <Node name="Home" expanded="True" />
+                <Node name="Todos" expanded="True">
+                  <Node name="Create.cshtml" selected="True" />
+                </Node>
               </Node>
-              <Node name="wwwroot" expanded="True" />
             </Node>
           </Node>
         </State>
@@ -46,4 +22,10 @@
     </Pads>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MultiItemStartupConfigurations />
+  <MonoDevelop.Ide.ItemProperties.Tasks PreferredExecutionTarget="/Applications/Brave Browser.app" />
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore />
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
 </Properties>

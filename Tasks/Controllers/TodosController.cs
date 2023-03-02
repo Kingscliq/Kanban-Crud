@@ -37,8 +37,10 @@ namespace Tasks.Controllers
 			{
 				_db.Todos.Add(todo);
 				_db.SaveChanges();
-			}
-			return RedirectToAction(nameof(Index));
+                return RedirectToAction(nameof(Index));
+            }
+
+			return View(todo);
 		}
     }
 }
