@@ -23,10 +23,10 @@ namespace Tasks.Controllers
 			return View(todos);
 		}
 
-        public IActionResult Create()
+        public IActionResult Create(TodosModel todo)
         {
-			var todo = new TodosModel();
-            return View();
+
+            return View(todo);
         }
 
 		[HttpPost]
@@ -41,9 +41,7 @@ namespace Tasks.Controllers
 
                 return RedirectToAction(nameof(Index));
 			}
-				return View("Create");
-	
-
+			return View(nameof(Create));
 			
 		}
     }
