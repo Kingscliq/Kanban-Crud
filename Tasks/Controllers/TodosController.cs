@@ -44,21 +44,37 @@ namespace Tasks.Controllers
 			return RedirectToAction(nameof(Create));
         }
 
-        [HttpPatch]
-        [ValidateAntiForgeryToken]
-        public IActionResult Edit(int? id)
+//GET 
+	
+        public IActionResult Edit(string? id)
         {
-			if(id == null || id == 0)
-				return NotFound();
+            if (id == null)
+                return NotFound();
 
-			var todoItem = _db.Todos.Find(id);
+            var todoItem = _db.Todos.Find(id);
 
-			if (todoItem == null)
-				return NotFound();
+            if (todoItem == null)
+                return NotFound();
 
-			return View(todoItem);
+            return View(todoItem);
         }
 
+//POST
+
+		[HttpPatch]
+		[ValidateAntiForgeryToken]
+		public IActionResult Edit(TodosModel todo)
+		{
+            if (ModelState.IsValid)
+            {
+                _db.Todos.Add(todo);
+                _db.SaveChanges();
+
+                return RedirectToAction(nameof(Index));
+            }
+
+            return RedirectToAction(nameof(Create));
+        }
        
     }
 }
