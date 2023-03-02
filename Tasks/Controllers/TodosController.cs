@@ -28,20 +28,33 @@ namespace Tasks.Controllers
             return View();
         }
 
-		[HttpPost]
-		[ValidateAntiForgeryToken]
+//GET
 
+        //public IActionResult Delete(string? id)
+        //{
+            
+        //        if (id == null)
+        //            return NotFound();
+
+        //        var todoItem = _db.Todos.Remove((int)id);
+
+        //        if (todoItem == null)
+        //            return NotFound();
+
+        //        return View(todoItem);
+            
+        //}
+
+        [HttpPost]
+		[ValidateAntiForgeryToken]
 		public IActionResult CreateTodo(TodosModel todo)
 		{
-			if (ModelState.IsValid)
-			{
+
 				_db.Todos.Add(todo);
 				_db.SaveChanges();
 
-                return RedirectToAction(nameof(Index));
-			}
-
-			return RedirectToAction(nameof(Create));
+                return RedirectToAction("Index");
+		
         }
 
 //GET 
@@ -65,15 +78,11 @@ namespace Tasks.Controllers
 		[ValidateAntiForgeryToken]
 		public IActionResult Edit(TodosModel todo)
 		{
-            if (ModelState.IsValid)
-            {
-                _db.Todos.Add(todo);
-                _db.SaveChanges();
+            _db.Todos.Update(todo);
+            _db.SaveChanges();
 
-                return RedirectToAction(nameof(Index));
-            }
-
-            return RedirectToAction(nameof(Create));
+            return RedirectToAction("Index");
+       
         }
        
     }
