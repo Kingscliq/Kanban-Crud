@@ -5,7 +5,7 @@
     ViewData["Title"] = "Delete Todo";
 }
 
-<form class="row" method="post" action="DeleteTodo">
+<form class="row" method="post" asp-controller="Todos" asp-action="DeleteTodo">
     <input asp-for="Id" hidden/>
     <div class="col-6 mx-auto">
 <div class="card">

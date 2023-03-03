@@ -84,8 +84,6 @@ namespace Tasks.Controllers
 
         }
 
-
-
         //GET
 
         public IActionResult Delete(string? id)
@@ -115,6 +113,7 @@ namespace Tasks.Controllers
 
                 return RedirectToAction("Index");
             }
+
             return NotFound();
 
         }
