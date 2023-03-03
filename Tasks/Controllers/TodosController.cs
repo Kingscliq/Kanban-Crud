@@ -49,12 +49,12 @@ namespace Tasks.Controllers
 		[ValidateAntiForgeryToken]
 		public IActionResult CreateTodo(TodosModel todo)
 		{
-
-				_db.Todos.Add(todo);
+          
+                _db.Todos.Add(todo);
 				_db.SaveChanges();
 
                 return RedirectToAction("Index");
-		
+				
         }
 
 //GET 
@@ -73,8 +73,7 @@ namespace Tasks.Controllers
         }
 
 //POST
-
-		[HttpPatch]
+		[HttpPost]
 		[ValidateAntiForgeryToken]
 		public IActionResult Edit(TodosModel todo)
 		{
@@ -82,9 +81,44 @@ namespace Tasks.Controllers
             _db.SaveChanges();
 
             return RedirectToAction("Index");
-       
+
         }
-       
+
+
+
+        //GET
+
+        public IActionResult Delete(string? id)
+        {
+            if (id == null)
+                return NotFound();
+
+            var todoItem = _db.Todos.Find(id);
+
+            if (todoItem == null)
+                return NotFound();
+
+            return View(todoItem);
+        }
+
+        //POST
+        [HttpPost]
+        [ValidateAntiForgeryToken]
+        public IActionResult DeleteTodo(string? id)
+        {
+            var todo = _db.Todos.Find(id);
+            
+            if (todo != null)
+            {
+                _db.Todos.Remove(todo);
+                _db.SaveChanges();
+
+                return RedirectToAction("Index");
+            }
+            return NotFound();
+
+        }
+
     }
 }
 
