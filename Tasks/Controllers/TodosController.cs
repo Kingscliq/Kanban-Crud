@@ -52,8 +52,8 @@ namespace Tasks.Controllers
           
                 _db.Todos.Add(todo);
 				_db.SaveChanges();
-
-                return RedirectToAction("Index");
+            TempData["success"] = "Todo Created Successfully";
+            return RedirectToAction("Index");
 				
         }
 
@@ -79,7 +79,7 @@ namespace Tasks.Controllers
 		{
             _db.Todos.Update(todo);
             _db.SaveChanges();
-
+            TempData["success"] = "Todo Edited Successfully";
             return RedirectToAction("Index");
 
         }
@@ -110,8 +110,12 @@ namespace Tasks.Controllers
             {
                 _db.Todos.Remove(todo);
                 _db.SaveChanges();
-
+                TempData["success"] = "Todo Deleted Successfully";
                 return RedirectToAction("Index");
+            }
+            else
+            {
+                TempData["error"] = "An Error Occured!";
             }
 
             return NotFound();
