@@ -79,7 +79,7 @@ namespace Tasks.Controllers
 		{
             _db.Todos.Update(todo);
             _db.SaveChanges();
-            TempData["success"] = "Todo Edited Successfully";
+            TempData["success"] = "Todo Updated Successfully";
             return RedirectToAction("Index");
 
         }
@@ -117,7 +117,6 @@ namespace Tasks.Controllers
             {
                 TempData["error"] = "An Error Occured!";
             }
-
             return NotFound();
 
         }

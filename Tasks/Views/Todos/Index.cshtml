@@ -15,12 +15,15 @@
                 <div class="d-flex align-items-center justify-content-between">
                     <div class="d-flex align-items-center">
                     <div>
-                        <input class="checkbox" style="height: 30px; width: 30px" type="checkbox" checked=@task.isCompleted>
+                        <form>
+                            <input onchange="" class="checkbox" id="isCompleted" style="height: 30px; width: 30px" type="checkbox" checked=@task.isCompleted>
+                        </form>
+                        
                     </div>
                     <div class="mx-3">
-                    <label class="form-check-label fs-6"> @task.title</label>
+                    <label class="form-check-label fs-6" id="title"> @task.title</label>
                     <div>
-                        <small class="text-secondary">@task.description</small>
+                        <small class="text-secondary" id="description">@task.description</small>
                     </div>
                     </div>
                 </div>
@@ -34,5 +37,14 @@
         }
     </ul>
 </div>
+
+<script type="text/javascript">
+    const checkBox = document.querySelector("#isCompleted");
+    const title = document.querySelector("#title");
+    const description = document.querySelector("#description");
+
+    if (checkBox.checked)
+
+</script>
 
 
